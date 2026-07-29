@@ -1,11 +1,11 @@
 # 🚀 Shubham Dhangar - DevOps Engineer Portfolio
 
-![Portfolio]([https://img.shields.io/badge/Portfolio-Live-success](https://shubham-dhangar.vercel.app))
+![Portfolio](https://img.shields.io/badge/Portfolio-Live-success)
 ![HTML](https://img.shields.io/badge/HTML-5-orange)
 ![CSS](https://img.shields.io/badge/CSS-3-blue)
-![GitHub Actions]([https://img.shields.io/badge/GitHub-Actions-black](https://github.com/S2141/Shubham_Dhangar_Portfolio/actions))
+![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-black)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)
-![Vercel]([https://img.shields.io/badge/Deploy-Vercel-black](https://shubham-dhangar.vercel.app))
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black)
 
 ---
 
@@ -29,7 +29,7 @@ The project is containerized using **Docker**, automatically deployed using **Gi
 
 # 🌐 Live Website
 
-> https://shubham-dhangar.vercel.app
+> [https://YOUR-DOMAIN.vercel.app](https://shubham-dhangar.vercel.app/)
 
 ---
 
