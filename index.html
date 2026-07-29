@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shubham Dhangar — DevOps &amp; AWS Cloud Engineer  </title>
+<title>Shubham Dhangar — DevOps &amp; AWS Cloud Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -180,12 +180,21 @@
   .form-submit.loading svg{ display:none; }
 
   /* ---------- PROFILE PHOTO ---------- */
+  .hero-top{
+    display:flex; align-items:center; justify-content:center; gap:28px;
+    margin-bottom:28px; text-align:left; max-width:640px; width:100%;
+  }
+  .hero-intro{ display:flex; flex-direction:column; gap:8px; }
+  .hero-intro .status-line{ margin-bottom:6px; align-self:flex-start; }
+  .hero-intro .name{ margin-bottom:2px; text-align:left; }
+  .hero-intro .role{ margin-bottom:0; text-align:left; }
+
   .profile-photo-wrap{
-    position:relative; width:132px; height:132px; margin-bottom:26px;
+    position:relative; width:118px; height:118px; flex:none;
     animation:floaty 5s ease-in-out infinite;
   }
   .profile-photo-wrap::before{
-    content:''; position:absolute; inset:-6px; border-radius:50%;
+    content:''; position:absolute; inset:-5px; border-radius:50%;
     background:conic-gradient(from 0deg, var(--cyan), var(--amber), var(--cyan));
     animation:spinBorder 6s linear infinite;
     opacity:0.9;
@@ -200,9 +209,24 @@
     border:3px solid var(--bg);
     animation:glowBreathe 3.2s ease-in-out infinite;
   }
+  .profile-photo-wrap.img-fallback .profile-photo{ display:none; }
+  .profile-photo-wrap.img-fallback::after{
+    z-index:2;
+    background:linear-gradient(155deg, var(--cyan) 0%, #2fa596 100%);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-weight:700; font-size:34px; color:#04120f;
+    content:'SD';
+  }
+
+  @media (max-width:560px){
+    .hero-top{ flex-direction:column; text-align:center; gap:16px; }
+    .hero-intro{ align-items:center; }
+    .hero-intro .status-line{ align-self:center; }
+    .hero-intro .name, .hero-intro .role{ text-align:center; }
+  }
 
   /* ---------- HERO ---------- */
-  .hero{ padding:96px 0 64px; text-align:center; display:flex; flex-direction:column; align-items:center; }
+  .hero{ padding:96px 0 64px; text-align:center; display:flex; flex-direction:column; align-items:center; overflow:hidden; }
   .status-line{
     font-family:var(--mono); font-size:12.5px; color:var(--cyan);
     display:inline-flex; align-items:center; gap:8px;
@@ -444,13 +468,16 @@
 <main class="wrap">
 
   <section class="hero">
-    <div class="profile-photo-wrap fade-up d1">
-      <img class="profile-photo" src="assets/profile.jpg" alt="Shubham Rajendra Dhangar">
+    <div class="hero-top">
+      <div class="profile-photo-wrap fade-up d1">
+        <img class="profile-photo" src="assets/profile.jpg" alt="Shubham Rajendra Dhangar" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="hero-intro">
+        <div class="status-line fade-up d2"><span class="pulse"></span>AVAILABLE FOR OPPORTUNITIES</div>
+        <h1 class="name fade-up d2"><span class="bracket">&lt;</span>Shubham Rajendra Dhangar<span class="bracket">/&gt;</span></h1>
+        <p class="role fade-up d3">DevOps &amp; <strong>AWS Cloud Engineer</strong></p>
+      </div>
     </div>
-
-    <div class="status-line fade-up d2"><span class="pulse"></span>AVAILABLE FOR OPPORTUNITIES</div>
-    <h1 class="name fade-up d2"><span class="bracket">&lt;</span>Shubham Rajendra Dhangar<span class="bracket">/&gt;</span></h1>
-    <p class="role fade-up d3">DevOps &amp; <strong>AWS Cloud Engineer</strong> — Infrastructure, Pipelines, Middleware Automation</p>
 
     <div class="terminal fade-up d4">
       <div class="terminal-bar"><span></span><span></span><span></span></div>
