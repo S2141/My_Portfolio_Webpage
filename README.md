@@ -1,11 +1,11 @@
 # 🚀 Shubham Dhangar - DevOps Engineer Portfolio
 
-![Portfolio](https://img.shields.io/badge/Portfolio-Live-success)
+![Portfolio]([https://img.shields.io/badge/Portfolio-Live-success](https://shubham-dhangar.vercel.app))
 ![HTML](https://img.shields.io/badge/HTML-5-orange)
 ![CSS](https://img.shields.io/badge/CSS-3-blue)
-![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-black)
+![GitHub Actions]([https://img.shields.io/badge/GitHub-Actions-black](https://github.com/S2141/Shubham_Dhangar_Portfolio/actions))
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)
-![Vercel](https://img.shields.io/badge/Deploy-Vercel-black)
+![Vercel]([https://img.shields.io/badge/Deploy-Vercel-black](https://shubham-dhangar.vercel.app))
 
 ---
 
