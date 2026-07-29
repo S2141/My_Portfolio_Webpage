@@ -1,57 +1,422 @@
-# Shubham Dhangar — Portfolio Website
+# 🚀 Shubham Dhangar - DevOps Engineer Portfolio
 
-Static single-page portfolio site. No build step, no npm install required.
+![Portfolio](https://img.shields.io/badge/Portfolio-Live-success)
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-black)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black)
 
-## Project structure
+---
+
+# 📌 Project Overview
+
+This repository contains my **personal DevOps & AWS Cloud Engineer Portfolio Website**.
+
+The portfolio showcases:
+
+- 👨‍💻 About Me
+- ☁ AWS Cloud Skills
+- ⚙ DevOps Skills
+- 🚀 Projects
+- 📜 Resume Download
+- 📞 Contact Information
+- 🌐 Responsive Design
+
+The project is containerized using **Docker**, automatically deployed using **GitHub Actions**, and hosted on **Vercel**.
+
+---
+
+# 🌐 Live Website
+
+> https://shubham-dhangar.vercel.app
+
+---
+
+# 📸 Portfolio Preview
+
 ```
-.
-├── .github/
-│   └── workflows/
-│       └── deploy.yml       # GitHub Actions — auto-deploys to GitHub Pages on push to main
-├── assets/
-│   └── Shubham_Dhangar_Resume.pdf   # downloadable CV, linked from the site
-├── Dockerfile                # containerize and serve via nginx
-├── nginx.conf                 # nginx config used inside the container
-├── index.html                 # the entire site (HTML + CSS + JS in one file)
-└── README.md
++------------------------------------------------------+
+|                    Portfolio Home                    |
+|------------------------------------------------------|
+|  Profile Image      |   Introduction                 |
+|                     |   DevOps Engineer              |
+|                     |   AWS Cloud Engineer           |
+|------------------------------------------------------|
+| Skills | Projects | Resume | Contact | Footer        |
++------------------------------------------------------+
 ```
 
-## Run locally
+---
 
-**Option A — just open it**
-Open `index.html` directly in a browser. The Download CV / contact form / all links work as-is.
+# 🚀 Technology Stack
 
-**Option B — local server**
+| Technology | Purpose |
+|------------|----------|
+| HTML5 | Web Structure |
+| CSS3 | Styling |
+| JavaScript | Interactive Features |
+| Docker | Containerization |
+| Nginx | Web Server |
+| GitHub Actions | CI/CD |
+| Git | Version Control |
+| GitHub | Source Code |
+| Vercel | Deployment |
+
+---
+
+# 📂 Project Structure
+
 ```
-python3 -m http.server 8000
+Portfolio/
+
+│
+├── .github
+│   └── workflows
+│       └── deploy.yml
+│
+├── assets
+│   ├── Profile.JPG
+│   ├── profile.jpg
+│   ├── Resume.pdf
+│
+├── Dockerfile
+├── nginx.conf
+├── index.html
+├── README.md
+│
+└── LICENSE (optional)
 ```
-Visit http://localhost:8000
 
-**Option C — Docker**
+---
+
+# 🏗 High Level Architecture
+
+```text
+              Developer
+
+                   │
+
+                   ▼
+
+             Git Push
+
+                   │
+
+                   ▼
+
+            GitHub Repository
+
+                   │
+
+                   ▼
+
+          GitHub Actions (CI)
+
+                   │
+
+       HTML Validation
+       Build
+       Docker Build
+
+                   │
+
+                   ▼
+
+           Deploy to Vercel
+
+                   │
+
+                   ▼
+
+           Live Portfolio Website
 ```
-docker build -t shubham-portfolio .
-docker run -p 8080:80 shubham-portfolio
+
+---
+
+# ☁ DevOps CI/CD Workflow
+
+```mermaid
+flowchart LR
+
+A[Developer]
+
+-->B[GitHub Repository]
+
+-->C[GitHub Actions]
+
+-->D[Build Project]
+
+-->E[Docker Build]
+
+-->F[Vercel Deployment]
+
+-->G[Portfolio Website]
 ```
-Visit http://localhost:8080
 
-## Deploy
+---
 
-**GitHub Pages (automatic)**
-Push this repo to GitHub with the default branch named `main`. The included workflow (`.github/workflows/deploy.yml`) builds and publishes the site to GitHub Pages automatically — enable Pages under **Settings → Pages → Source: GitHub Actions** once.
+# 🐳 Docker Architecture
 
-**Vercel**
-`vercel deploy` in this folder, or drag-and-drop the folder at vercel.com/new
+```text
 
-**Netlify**
-Drag-and-drop the folder at app.netlify.com/drop
+             Docker Build
 
-**Any Docker host (Fly.io, Render, a VPS, etc.)**
-Build the image from the included `Dockerfile` and deploy it — nginx serves the site on port 80.
+                  │
 
-## Edit content
-All text (summary, skills, experience, projects, education, contact) lives directly in `index.html` — search for the relevant section id (`#about`, `#skills`, `#experience`, `#projects`, `#education`, `#contact`) and edit in place.
+                  ▼
 
-To swap the CV, replace `assets/Shubham_Dhangar_Resume.pdf` with a new file of the same name (or update the three `href="assets/..."` references in `index.html` if you rename it).
+        Docker Image Created
 
-## Customize colors
-All colors are CSS variables at the top of the `<style>` block in `index.html`, under `:root` — change `--cyan`, `--amber`, `--bg`, etc.
+                  │
+
+                  ▼
+
+        Nginx Web Server Container
+
+                  │
+
+                  ▼
+
+          Portfolio Website
+```
+
+---
+
+# ⚙ GitHub Actions Workflow
+
+```text
+
+Git Push
+
+↓
+
+GitHub Actions Trigger
+
+↓
+
+Checkout Repository
+
+↓
+
+Install Dependencies
+
+↓
+
+Build Website
+
+↓
+
+Deploy to Vercel
+
+↓
+
+Deployment Successful
+```
+
+---
+
+# 🚀 Installation
+
+Clone Repository
+
+```bash
+git clone https://github.com/S2141/My_Portfolio_Webpage.git
+```
+
+Go to project
+
+```bash
+cd My_Portfolio_Webpage
+```
+
+---
+
+# ▶ Run Locally
+
+Simply open
+
+```
+index.html
+```
+
+or use VS Code Live Server.
+
+---
+
+# 🐳 Docker
+
+Build Image
+
+```bash
+docker build -t portfolio .
+```
+
+Run Container
+
+```bash
+docker run -d -p 8080:80 portfolio
+```
+
+Open
+
+```
+http://localhost:8080
+```
+
+---
+
+# 🚀 GitHub Actions Deployment
+
+Every push to the **main** branch automatically:
+
+- Checks out code
+- Builds the project
+- Creates Docker image
+- Deploys to Vercel
+
+No manual deployment required.
+
+---
+
+# 📋 Features
+
+✅ Responsive Portfolio
+
+✅ Modern UI
+
+✅ Profile Section
+
+✅ About Me
+
+✅ Skills
+
+✅ Projects
+
+✅ Resume Download
+
+✅ Contact Section
+
+✅ Docker Support
+
+✅ GitHub Actions
+
+✅ Vercel Deployment
+
+---
+
+# 📜 Skills Highlighted
+
+### Cloud
+
+- AWS EC2
+- IAM
+- S3
+- VPC
+- Route53
+- CloudFront
+
+### DevOps
+
+- Docker
+- Kubernetes
+- Jenkins
+- GitHub Actions
+- Terraform
+- Ansible
+
+### Monitoring
+
+- Grafana
+- Prometheus
+- CloudWatch
+
+---
+
+# 📞 Contact
+
+**Shubham Dhangar**
+
+DevOps Engineer
+
+📧 Email
+
+(Add Email)
+
+💼 LinkedIn
+
+(Add LinkedIn URL)
+
+🐙 GitHub
+
+https://github.com/S2141
+
+---
+
+# 📈 Future Enhancements
+
+- Dark Mode
+- Blog Section
+- Project Dashboard
+- Visitor Counter
+- Contact Form Backend
+- AWS Hosting using EC2
+- EKS Deployment
+- Terraform Infrastructure
+- CloudFront CDN
+- SSL Certificate
+
+---
+
+# ⭐ Repository Workflow
+
+```text
+
+Developer
+
+↓
+
+GitHub
+
+↓
+
+GitHub Actions
+
+↓
+
+Docker Build
+
+↓
+
+Vercel
+
+↓
+
+Live Website
+```
+
+---
+
+# 📄 License
+
+This project is created for educational and portfolio purposes.
+
+---
+
+# ❤️ Developed By
+
+## Shubham Dhangar
+
+DevOps Engineer | AWS Cloud Engineer
+
+```
+
+### I also recommend adding these diagrams later for an even more professional GitHub repository:
+- AWS Architecture Diagram (EC2 → ALB → Route53 → CloudFront)
+- Docker Container Architecture
+- GitHub Actions CI/CD Pipeline
+- Kubernetes (EKS) Deployment Architecture
+- Terraform Infrastructure Diagram
+- Monitoring Stack (Prometheus → Grafana → CloudWatch)
+
+These will make your repository look like a production-grade DevOps project.
